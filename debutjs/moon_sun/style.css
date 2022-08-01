@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    color:  white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.layout{
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.menu{
+    border-right: 1px solid white;
+    padding: 5px;
+    width: 50%;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.mode{
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 5px;
+    width: 60px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 1px white;
+    background: white;
+    transition:  1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+
+}
+
+.icon{
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    position: relative;
+}
+.lien_interne{
+    padding: 5px;
+}
+
+/* creation de la boule  */
+
+.ball{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+    /* padding-right: 10px; */
+    background: black;
+    /* box-shadow: 1px 1px 1px white; */
+    border-radius: 50%;
+    transform: translate(-25%, -50%); /* centrer la boule */
+    /* transform: translateX(50%); */
+    transition:  1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+
+
+}
+
+.cb{display: none;}
+
+
+i{
+    color: #000;
+}
+.changeColor{
+    color: white;
+}
+/* when clic on checkbox, body take the class dark */
+
+.dark{
+    background: #000;
+    transition:  1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+
+}
+
+/* checkbox check */
+
+.cb:checked + .mode .ball{
+    transform: translate(125%, -50%);
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+}
+
+.cb:checked + .mode{
+    background: black;
+    transition:  1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+
+}
